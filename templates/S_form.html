@@ -1,0 +1,11 @@
+<html>
+    <body>
+        {% block content %}
+        <form method = "POST" action = "DetailSave" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{opj.as_p}}
+        <input type = "submit">
+        </form>
+        {% endblock %}
+    </body>
+</html>

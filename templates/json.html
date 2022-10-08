@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1 style = "color:red">student full table<h1>
+<table border=1>
+<tr style = "color:green">
+<th>Id</th>
+<th>Sub</th>
+<th>mark</th>
+<th>ceate_date</th>
+<th>update</th>
+<th>update_date</th>
+<th>crator</th>
+<th>updator</th>
+</tr>
+{% for i in opj %}
+<tr>
+<td> {{i.student_id}}</td>
+<td> {{i.sub}}</td>
+<td> {{i.mrk}}</td>
+<td> {{i.created_at}}</td>
+<td><button><a href = "/Mark/update/{{i.id}}">update</a></button></td>
+<td> {{i.updated_at}}</td>
+<td> {{i.creator}}</td>
+<td> {{i.updator}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

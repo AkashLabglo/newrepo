@@ -1,0 +1,12 @@
+<html>
+    <body>
+        {% block content %}
+        <form method = "POST" action = "MRK_Save">
+        {% csrf_token %}
+        {{opj.as_p}}
+        <input type = "submit">
+        
+        </form>
+        {% endblock %}
+    </body>
+</html>

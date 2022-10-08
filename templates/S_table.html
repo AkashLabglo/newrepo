@@ -1,0 +1,27 @@
+<html>
+<body>
+<h1 style = "color:red">student full table<h1>
+<table border=1>
+<tr style = "color:green">
+<th>i.student_id</th>    
+<th>Studen_Image</th>
+<th>Studen_Detail</th>
+<th>Delete</th>
+<th>mark</th>
+</tr>
+{% for i in opj %}
+<tr>
+<td>{{i.id}}</th>    
+<td><img src ="{{i.Img.url}}" alt = "Not Uploaded" width =100px ></td>
+<td><button><a href = "ShowDetails/{{i.id}}">Show</a></button></td>
+<td><button><a href = "Delete/{{i.id}}">Delete</a></button></td>
+<td><button><a href = "Mark/{{i.id}}">Mark</a></button></td>
+
+{% endfor %}
+</table>
+<button><a href = "from">student_Add</a></button>
+<button><a href = "MRK_form">Mark_Add</a></button>
+<button><a href = "logouted">logout</a></button>
+<button><a href = "Jason">json_formate</a></button>
+</body>
+</html>
